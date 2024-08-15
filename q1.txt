@@ -1,0 +1,33 @@
+Ojas Hegde 
+MT2024105
+
+1.a Create soft link
+using shell commands
+ln -s {file} {soft link}
+-s signifies softlink or symbolic link
+
+using system call symlink
+#include <unistd.h> //unix standard library
+int symlink(const char *target, const char* link); 
+return 0 if success -1 if not
+
+1.b Create hard link
+ln {file} {hard link}
+int link(const char *target, const char* link);
+
+1.c Create fifo
+mkfifo myfifo
+using mknod
+ret = mknod(fifoName, S_IFIFO | 0600, 0);
+S_IFIFO tells mknod that we are creating a fifo. we bitwise or it with the file mode bitwise
+
+#include <unistd.h>
+#include <sys/stat.h>
+
+int main(){
+    link("./newfile", "./hard2");
+    symlink("./newfile", "./soft2");
+    int ret;
+    ret = mknod("./fifoName", S_IFIFO | 0600, 0);
+
+}

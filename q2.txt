@@ -1,0 +1,12 @@
+Ojas Hegde 
+MT2024105
+
+int main(){
+    while(1);
+}
+
+cc q2.c
+./a.out & // to run in background
+ls -l /proc/7637
+cat /proc/7637/status
+
