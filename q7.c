@@ -9,8 +9,8 @@ MT2024105
 
 int main(){
     int fd1, fd2, r;
-    fd1 = open("./temp1",O_CREAT| O_RDONLY , 0744);
-    fd2 = open("./temp2", O_CREAT | O_RDWR, 0744);
+    fd1 = open("./temp1", O_RDONLY );
+    fd2 = open("./temp2", O_CREAT | O_RDWR | O_TRUNC, 0744);
     char buf[80];
     r = read(fd1, buf, 80);
     while (r)
@@ -22,3 +22,16 @@ int main(){
     close(fd1);
     close(fd2);
 }
+/*output
+cat temp1 
+random words
+some more words
+
+./a.out
+Copied temp1 to temp2
+
+$ cat temp2
+random words
+some more words
+more words
+*/

@@ -14,3 +14,7 @@ int main(){
     printf("The file descriptor is %d\n", fd1);
     close(fd1);
 }
+/*output
+$ ./a.out
+The file descriptor is 3
+*/

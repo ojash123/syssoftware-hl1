@@ -6,7 +6,7 @@ MT2024105
 #include <fcntl.h>
 #include <stdlib.h>
 #include <stdio.h>
-
+#include <unistd.h>
 int main(){
     int fd1, fd2;
     fd1 = open("readwr",O_CREAT| O_RDWR, 0744);
@@ -15,3 +15,7 @@ int main(){
     close(fd1);
     close(fd2);
 }
+/*Output
+$ ./a.out
+The file descriptor is 3 and -1
+*/

@@ -12,3 +12,8 @@ int main(){
     r = read(0, buf, 80); //0 is stdin, 1 is stdout, 2 is stderr
     write(1, buf, r);
 }
+/*Output
+$ ./a.out
+hello
+hello
+*/
