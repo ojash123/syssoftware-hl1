@@ -39,7 +39,15 @@ int main(int argc, char* argv[]){
         if(S_ISLNK(fileStat.st_mode)){
             printf("Soft link file\n");
         }
-        close(fd1);
+        //close(fd1);
 
     }
 }
+
+/*
+$ ./a.out soft1 newfile myfifo .
+Soft link file
+Regular file
+fifo file
+directory file
+*/

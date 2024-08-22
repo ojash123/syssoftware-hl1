@@ -19,3 +19,8 @@ int main(void){
     printf("Written %d to ticket.txt\n", tno);
     close(fd);
 }
+
+/*
+$ ./a.out
+Written 10 to ticket.txt
+*/

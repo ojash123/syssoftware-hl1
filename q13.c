@@ -26,3 +26,8 @@ int main(){
         printf("nothing has happened in 10s\n");
     }
 }
+/*
+$ ./a.out 
+hello
+Seen a read in stdin within 10s
+*/

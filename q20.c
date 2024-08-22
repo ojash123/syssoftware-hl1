@@ -18,3 +18,8 @@ int main(){
     prio = getpriority(PRIO_PROCESS, 0);
     printf("The priority from getpriority after nice is %d\n", prio);
 }
+/*
+$ ./a.out 
+The priority from getpriority is 0
+The priority from getpriority after nice is 4
+*/

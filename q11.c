@@ -18,10 +18,18 @@ int main(){
 
     dprintf(fd, "The original fd is: %d\n", fd);
     fddup = dup(fd);
-    dprintf(fd, "The dup fd is %d\n", fddup);
+    dprintf(fddup, "The dup fd is %d\n", fddup);
     fddup2 = dup2(fd , 7);
-    dprintf(fd, "The dup2 fd is %d\n", fddup2);
+    dprintf(fddup2, "The dup2 fd is %d\n", fddup2);
     fddupfcntl = fcntl(fd, F_DUPFD);
-    dprintf(fd, "The fcntl dupfd fd is %d\n", fddupfcntl);
+    dprintf(fddupfcntl, "The fcntl dupfd fd is %d\n", fddupfcntl);
     close(fd);
 }
+
+/*
+$ cat dup.txt 
+The original fd is: 3
+The dup fd is 4
+The dup2 fd is 7
+The fcntl dupfd fd is 5
+*/

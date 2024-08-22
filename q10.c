@@ -19,3 +19,12 @@ int main(){
     write(fd, "9876543210", 10);
     printf("lseek returns %d\nWritten to lseek.txt...\n", t);
 }
+/*output
+$ ./a.out
+lseek returns 20
+Written to lseek.txt...
+$ od lseek.txt
+0000000 031061 032063 033065 034067 030071 000000 000000 000000
+0000020 000000 000000 034071 033067 032065 031063 030061
+0000036
+*/

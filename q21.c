@@ -11,3 +11,7 @@ int main(){
     if(child_pid != 0)
         printf("The parent pid is %d and the child pid is %d\n", getpid(), child_pid);
 }
+/*
+$ ./a.out 
+The parent pid is 13515 and the child pid is 13516
+*/

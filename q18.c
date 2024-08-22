@@ -100,3 +100,35 @@ int main(){
         }
     }
 }
+
+/*
+$ ./a.out 
+1. Create file	2. Read Record	3. Exit
+1
+Created file records
+1. Create file	2. Read Record	3. Exit
+2
+Enter record no: 2
+Entering critical section...
+Record no: 2
+Record Name: Tony
+Access Count: 0
+Enter to continue 
+1. Create file	2. Read Record	3. Exit
+2
+Enter record no: 1
+Entering critical section...
+Record no: 1
+Record Name: Ojas
+Access Count: 0
+Enter to continue2
+1. Create file	2. Read Record	3. Exit
+2
+Enter record no: 2
+Entering critical section...
+Record no: 2
+Record Name: Tony
+Access Count: 1
+Enter to continue
+
+*/

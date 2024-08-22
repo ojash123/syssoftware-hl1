@@ -15,3 +15,7 @@ int main(){
     printf("The access flags are %o\n", t);
     close(fd);
 }
+/*
+$ ./a.out
+The access flags are 100002
+*/

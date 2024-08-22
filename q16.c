@@ -39,3 +39,11 @@ int main(void){
     close(fd);
 
 }
+/*
+$ ./a.out 
+Entering critical section
+Enter to continue: 
+Finished writing... Now reading critical section
+ABCD
+Enter to continue: 
+*/

@@ -33,3 +33,9 @@ int main(){
     fcntl(fd, F_SETLK, &lock);
     close(fd);
 }
+/*
+$ ./a.out 
+Entering critical section
+Read 10
+Enter to continue...
+*/

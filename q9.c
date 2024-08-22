@@ -36,10 +36,22 @@ int main(){
     printf("Size: %lu bytes\n", (unsigned long)fileStat.st_size);
     printf("Block size: %lu bytes\n", (unsigned long)fileStat.st_blksize);
     printf("Number of blocks: %lu\n", (unsigned long)fileStat.st_blocks);
-
-    // Print the times of last access, modification, and status change
     printf("Time of last access: %s", ctime(&fileStat.st_atime));
     printf("Time of last modification: %s", ctime(&fileStat.st_mtime));
     printf("Time of last change: %s", ctime(&fileStat.st_ctime));
 
 }
+/*Ouptut
+$ ./a.out
+File: newfile
+Inode: 2885170
+Number of hard links: 3
+UID: 1000
+GID: 1000
+Size: 14 bytes
+Block size: 4096 bytes
+Number of blocks: 8
+Time of last access: Thu Aug 22 09:18:22 2024
+Time of last modification: Thu Aug  8 08:49:24 2024
+Time of last change: Thu Aug  8 08:49:38 2024
+*/

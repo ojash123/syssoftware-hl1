@@ -24,3 +24,10 @@ int main(){
     printf("read temp1\n");
     close(fd1);
 }
+/*Output
+$ ./a.out
+random words
+some more words
+more words
+read temp1
+*/
