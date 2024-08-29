@@ -8,17 +8,23 @@ MT2024105
 #include <stdio.h>
 #include <time.h>
 
+int rdtsc(){
+    unsigned long long dst;
+    __asm__ __volatile__ ("rdtsc": "=A" (dst));
+}
+
 int main(){
-    clock_t c, c2;
-    c = clock() ;
-    getpid();
-    c2 = clock();
-    double diff = c2 - c;
-    double difftime = diff / CLOCKS_PER_SEC;
-    printf("Clock cycles taken = %.0f, time = %f\n", diff, difftime);
+    int nano;
+    unsigned long long start, end;
+    start = rdtsc();
+    for(int i = 0; i < 10000; i++)
+        getpid();
+    end = rdtsc();
+    nano = (end - start)/ 1.20;
+    printf("The function takes %d nano secs\n", nano);
 }
 
 /*
 $ ./a.out 
-Clock cycles taken = 7, time = 0.000007
+The function takes 3340041 nano secs
 */
